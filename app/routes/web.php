@@ -19,7 +19,17 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// サンプルの記述
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::resource('posts', App\Http\Controllers\PostController::class);
+
+// 下記追加
+// 少し違う書き方できるか確認：OK
+Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
+
+// postsのCRUD機能を自動でルーティングしてくれるLaravel便利機能
+Route::resource('posts', 'App\Http\Controllers\PostController'); 
 
 
-Route::resource('posts', App\Http\Controllers\PostController::class);
+

@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+html{
+    font-size:100%;
+}
+
+
+body{
+    background-color: #F2F2F2;
+    margin: 0 auto;
+}
+
+ul{
+    padding-left: 0px;
+}
+
+li{
+    list-style: none;
+}
+header{
+    /* border: 1px solid; */
+}
+
+
+main{
+    /* border: 1px solid; */
+}
+
+footer{
+    /* border: 1px solid; */
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+.wrapper{
+    max-width: 1300px;
+    margin:0 auto;
+    /* border: 1px solid; */
+}
+
+
+.header-body{
+    display: flex;
+}
+.center-title{
+    flex:1;
+    text-align: center;
+}
+
+.center-title h1{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.center-title p{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.left-nav{
+    width:300px;
+}
+
+.right-nav{
+    width:300px;
+    text-align: right;
+    
+}
+
+.photo-back{
+    /* border: 1px solid; */
+}
+.photo-back img{
+    width: 100%;
+}
+
+
+
+.heading{
+    padding-top: 10px;
+}
+
+.contents-back{
+    background: #E1F6F7;    
+    text-align:center;
+}
+
+
+.contents-grid{
+    display: grid;
+    gap:26px;
+    text-align: center;
+    grid-template-columns: repeat(3, minmax(100px,1fr));
+}
+.contents-grid h3{
+    font-size: 1.5rem;
+}
+.contents-grid p{
+    line-height: 5px;
+}
+
+
+.how-to-use-back{
+    text-align:center;
+    background: #EAF3C2;
+
+}
+
+.how-to-use-grid{
+    display: grid;
+    gap:26px;
+    text-align: left;
+    grid-template-columns: repeat(3, minmax(100px,1fr));
+}
+.use-step{
+    display: flex;
+    flex-direction: column;
+}
+.use-step p{
+flex:1;
+}
+.how-to-use-grid h3{
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.how-to-use-grid p{
+    line-height: 5px;
+    margin-left: 20px;
+    margin:10px auto;
+}
+
+
+
+.button-back{
+    text-align: center;
+    margin: 30px auto;
+}
+.button{
+    text-align:center;
+    font-size:1.375rem;
+    background: #0bd;
+    color: #fff;
+    border-radius: 5px;
+    padding: 18px 32px;
+}
+
+.button:hover{
+    background: #0090aa;
+}
+
+
+.upper-footer{
+    background: #F9DDD9;
+    text-align:center;
+}
+.bottom-footer{
+    background: #FF657A;
+    text-align: center;
+}
+.footer-nav-box{
+    /* border: 1px solid; */
+    text-align: center;
+    width: 700px;
+    margin: 0 auto;
+}
+.footer-nav ul{
+    text-align: center;
+    display: flex;
+}
+.footer-nav li{
+    margin:0 auto;
+}
