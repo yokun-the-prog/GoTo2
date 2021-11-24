@@ -4,6 +4,7 @@
 <div class="container">
     <div class="row">
 
+ここにコンテンツを書いていく。
     </div>
 </div>
 @endsection

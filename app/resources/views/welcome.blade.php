@@ -63,7 +63,7 @@
                                 @if (Route::has('register'))
                                     <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">会員登録</a>
                                 @endif       
-                                <li><a href="{{ url('/contact') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">お問い合わせ</a></li>
+                                <li><a href="{{ ('/contact') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">お問い合わせ</a></li>
                             </ul>
                         </nav>
                     @endauth

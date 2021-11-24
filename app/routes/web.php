@@ -32,4 +32,22 @@ Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 Route::resource('posts', 'App\Http\Controllers\PostController'); 
 
 
+// お問合せフォーム用
+Route::get('/contact', 'App\Http\Controllers\ContactController@index')->name('contact.index');
+Route::post('/contact/confirm', 'App\Http\Controllers\ContactController@confirm')->name('contact.confirm');
+Route::post('/contact/thanks', 'App\Http\Controllers\ContactController@send')->name('contact.send');
+
+
+// コンテンツ用
+//Route::get('/locations', [App\Http\Controllers\LocationController::class, 'index'])->name('locations');
+
+Route::get('/locations', function () {
+    return view('/locations/index');
+});
+//Route::get('/locations', 'App\Http\Controllers\LocationController@index');
+Route::get('/trips/index', 'App\Http\Controllers\TripController@index')->name('trips');
+Route::get('/histories/index', 'App\Http\Controllers\HistoryController@index')->name('histories');
+Route::get('/reviews/index', 'App\Http\Controllers\ReviewController@index')->name('reviews');
+
+
 
