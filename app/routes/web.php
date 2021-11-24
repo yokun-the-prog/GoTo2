@@ -39,15 +39,10 @@ Route::post('/contact/thanks', 'App\Http\Controllers\ContactController@send')->n
 
 
 // コンテンツ用
-//Route::get('/locations', [App\Http\Controllers\LocationController::class, 'index'])->name('locations');
-
-Route::get('/locations', function () {
-    return view('/locations/index');
-});
-//Route::get('/locations', 'App\Http\Controllers\LocationController@index');
-Route::get('/trips/index', 'App\Http\Controllers\TripController@index')->name('trips');
-Route::get('/histories/index', 'App\Http\Controllers\HistoryController@index')->name('histories');
-Route::get('/reviews/index', 'App\Http\Controllers\ReviewController@index')->name('reviews');
+Route::get('/location', 'App\Http\Controllers\LocationController@index')->name('location.index');
+Route::get('/trip', 'App\Http\Controllers\TripController@index')->name('trip.index');
+Route::get('/history', 'App\Http\Controllers\HistoryController@index')->name('history.index');
+Route::get('/review', 'App\Http\Controllers\ReviewController@index')->name('review.index');
 
 
 

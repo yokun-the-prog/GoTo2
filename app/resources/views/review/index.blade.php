@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('./layouts.app')
 
 @section('content')
     <section class="content-header">
@@ -9,7 +9,6 @@
                 </div>
                 <div class="col-sm-6">
                     <a class="btn btn-primary float-right"
-                       href="{{ route('posts.create') }}">
                         Add New
                     </a>
                 </div>
@@ -25,7 +24,6 @@
 
         <div class="card">
             <div class="card-body p-0">
-                @include('posts.table')
 
                 <div class="card-footer clearfix">
                     <div class="float-right">
