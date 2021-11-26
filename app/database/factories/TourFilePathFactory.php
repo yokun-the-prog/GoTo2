@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\User;
+use App\Models\TourFilepath;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class UserFactory extends Factory
+class TourFilepathFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = User::class;
+    protected $model = TourFilepath::class;
 
     /**
      * Define the model's default state.
@@ -22,12 +22,10 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'user_division_id' => $this->faker->word,
-        'name' => $this->faker->word,
-        'email' => $this->faker->word,
-        'email_verified_at' => $this->faker->date('Y-m-d H:i:s'),
-        'password' => $this->faker->word,
-        'rememberToken' => $this->faker->word,
+            'tour_id' => $this->faker->word,
+        'map_path' => $this->faker->word,
+        'history_path' => $this->faker->word,
+        'photorally_path' => $this->faker->word,
         'created_at' => $this->faker->date('Y-m-d H:i:s'),
         'updated_at' => $this->faker->date('Y-m-d H:i:s')
         ];

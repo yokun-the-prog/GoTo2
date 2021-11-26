@@ -7,7 +7,7 @@ use App\Http\Requests\UpdatePostRequest;
 use App\Repositories\PostRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
-use Flash;
+use Laracasts\Flash\Flash;
 use Illuminate\Support\Facades\Auth;
 use Response;
 

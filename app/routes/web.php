@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +44,17 @@ Route::get('/location', 'App\Http\Controllers\LocationController@index')->name('
 Route::get('/trip', 'App\Http\Controllers\TripController@index')->name('trip.index');
 Route::get('/history', 'App\Http\Controllers\HistoryController@index')->name('history.index');
 Route::get('/review', 'App\Http\Controllers\ReviewController@index')->name('review.index');
+
+
+
+
+Route::resource('tours', App\Http\Controllers\TourController::class);
+
+
+Route::resource('spots', App\Http\Controllers\SpotController::class);
+
+
+Route::resource('destinations', App\Http\Controllers\DestinationController::class);
 
 
 

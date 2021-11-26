@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\User;
+use App\Models\Destination;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class UserFactory extends Factory
+class DestinationFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = User::class;
+    protected $model = Destination::class;
 
     /**
      * Define the model's default state.
@@ -22,12 +22,12 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'user_division_id' => $this->faker->word,
-        'name' => $this->faker->word,
-        'email' => $this->faker->word,
-        'email_verified_at' => $this->faker->date('Y-m-d H:i:s'),
-        'password' => $this->faker->word,
-        'rememberToken' => $this->faker->word,
+            'tour_id' => $this->faker->word,
+        'spot_id' => $this->faker->word,
+        'erratum_division_id' => $this->faker->word,
+        'arrive_at' => $this->faker->word,
+        'departure_at' => $this->faker->word,
+        'photorally_location' => $this->faker->word,
         'created_at' => $this->faker->date('Y-m-d H:i:s'),
         'updated_at' => $this->faker->date('Y-m-d H:i:s')
         ];

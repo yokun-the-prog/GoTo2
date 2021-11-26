@@ -2,43 +2,67 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Eloquent as Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+/**
+ * Class User
+ * @package App\Models
+ * @version November 26, 2021, 10:49 am JST
+ *
+ * @property foreignId $user_division_id
+ * @property string $name
+ * @property string $email
+ * @property string $email_verified_at
+ * @property string $password
+ * @property string $rememberToken
+ */
+class User extends Model
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use SoftDeletes;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var string[]
-     */
-    protected $fillable = [
+    use HasFactory;
+
+    public $table = 'users';
+    
+
+    protected $dates = ['deleted_at'];
+
+
+
+    public $fillable = [
+        'user_division_id',
         'name',
         'email',
+        'email_verified_at',
         'password',
+        'rememberToken'
     ];
 
     /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
-    /**
-     * The attributes that should be cast.
+     * The attributes that should be casted to native types.
      *
      * @var array
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        'name' => 'string',
+        'email' => 'string',
+        'password' => 'string',
+        'rememberToken' => 'string'
+    ];
+
+    /**
+     * Validation rules
+     *
+     * @var array
+     */
+    public static $rules = [
+        'user_division_id' => 'required|numeric',
+        'name' => 'required',
+        'email' => 'required',
+        'email_verified_at' => 'nullable',
+        'password' => 'required',
+        'rememberToken' => 'nullable'
     ];
 }
